@@ -27,4 +27,4 @@ jobs:
         run: mvn --batch-mode --update-snapshots package
 
       - name: Build Docker Image
-        run: docker build ./backend/Dockerfile
+        run: docker build ./backend/
