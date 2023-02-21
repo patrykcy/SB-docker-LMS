@@ -20,3 +20,14 @@ chmod +x ./mvnw
 If you open the project in Intellij, it should automatically recognise it as a Spring Boot application.
 
 Once it's ready, the API will be available at http://localhost:8080
+
+## Running with Docker
+To build and run the docker image for this app:
+```
+docker build -t sba-backend .
+```
+This will create a production with just the JAR and JRE.  
+To run the docker image:
+```
+docker run -p 8080:8080 sba-backend
+```
