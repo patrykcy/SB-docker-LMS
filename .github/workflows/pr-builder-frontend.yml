@@ -1,12 +1,12 @@
-name: Backend PR Builder
+name: Frontend PR Builder
 
 on:
   push:
     paths:
-      - 'backend/**'
+      - 'frontend/**'
   pull_request:
     paths:
-      - 'backend/**'
+      - 'frontend/**'
 
 jobs:
   build:
