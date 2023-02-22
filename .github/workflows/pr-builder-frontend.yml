@@ -1,16 +1,28 @@
-name: Backend PR Builder
+name: Frontend PR Builder
 
 on:
   push:
     paths:
-      - 'backend/**'
+      - 'frontend/**'
   pull_request:
     paths:
-      - 'backend/**'
+      - 'frontend/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    # TODO: Create steps for building Frontend in PR
-    # steps:
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup@v3
+        with:
+          node-version: 18
+
+      - run: npm ci
+
+      - run: npm run lint
+
+      - run: npm run build
