@@ -12,4 +12,8 @@ Now that we have Docker Compose set up, we can run both services with:
 ```
 docker compose up
 ```
-Note: At this point, we only have the backend set up with docker compose, and will need to add the config for the frontend image.   
+Note: At this point, we only have the backend set up with docker compose, and will need to add the config for the frontend image.
+
+## Releasing
+Whenever a new commit is pushed to main, a pipeline will be launched that will build new versions of the frontend and backend docker images.
+These images are then published to the GitHub Container Registry.
