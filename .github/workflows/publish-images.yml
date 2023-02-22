@@ -54,9 +54,4 @@ jobs:
           push: true
           tags: ${{ env.REGISTRY }}/${{env.REPO}}-sba-backend:latest
 
-      - name: Build and push frontend image
-        uses: docker/build-push-action@v4
-        with:
-          context: ./frontend
-          push: true
-          tags: ${{ env.REGISTRY }}/${{env.REPO}}-sba-frontend:latest
+      ## TODO: Build and publish frontend image
