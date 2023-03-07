@@ -7,3 +7,9 @@ The repo contains 2 projects:
 
 Instructions for running these projects can be found in the appropriate directories.
 
+## Running everything with Docker Compose
+Now that we have Docker Compose set up, we can run both services with:
+```
+docker compose up
+```
+Note: At this point, we only have the backend set up with docker compose, and will need to add the config for the frontend image.   
