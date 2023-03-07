@@ -1,0 +1,16 @@
+name: Frontend PR Builder
+
+on:
+  push:
+    paths:
+      - 'frontend/**'
+  pull_request:
+    paths:
+      - 'frontend/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # TODO: Create steps for building Frontend in PR
+    # steps:
